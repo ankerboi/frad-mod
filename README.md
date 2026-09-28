@@ -1,5 +1,9 @@
 ![CS:GO Legacy](https://i.ibb.co/vvR4sgjy/Screenshot-2026-09-16-010337.png)
 
+## What it is
+
+### Skin Editor for the [mikkokko's csgo_gc](https://github.com/mikkokko/csgo_gc)
+
 ## How to Download
 
 1. Download CS:GO Legacy from [Steam](https://store.steampowered.com/app/4465480/CounterStrikeGlobal_Offensive/).
