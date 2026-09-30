@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """
 CS:GO GC Inventory Editor v15
-Multi-item support: multiple knives, gloves, agents, skins.
-Equipped tab shows live preview of everything queued to write.
 """
 
 import tkinter as tk
