@@ -1096,14 +1096,18 @@ class CSGOEditor(tk.Tk):
 
     def _bind_toast_visibility(self, toast):
         """Show/hide toast in sync with the main window's minimized state."""
-        def on_main_map(_e=None):
+        def on_main_map(e=None):
+            if e is not None and e.widget is not self:
+                return
             try:
                 toast.deiconify()
                 self._toast_reposition(toast)
             except Exception:
                 pass
 
-        def on_main_unmap(_e=None):
+        def on_main_unmap(e=None):
+            if e is not None and e.widget is not self:
+                return
             try:
                 toast.withdraw()
             except Exception:
@@ -1119,7 +1123,15 @@ class CSGOEditor(tk.Tk):
             except Exception:
                 pass
 
+        def on_main_focus(_e=None):
+            try:
+                if toast.winfo_exists() and self.wm_state() == "normal":
+                    toast.lift()
+            except Exception:
+                pass
+
         ids = {
+            "<FocusIn>":   self.bind("<FocusIn>",   on_main_focus,     add="+"),
             "<Map>":       self.bind("<Map>",       on_main_map,       add="+"),
             "<Unmap>":     self.bind("<Unmap>",     on_main_unmap,     add="+"),
             "<Configure>": self.bind("<Configure>", on_main_configure, add="+"),
@@ -1150,7 +1162,6 @@ class CSGOEditor(tk.Tk):
         toast = tk.Toplevel(self)
         toast.overrideredirect(True)
         toast.configure(bg="#2a2a2a")
-        toast.attributes("-topmost", True)
         try:
             toast.attributes("-alpha", 0.97)
         except Exception:
@@ -1163,6 +1174,7 @@ class CSGOEditor(tk.Tk):
         ).pack()
 
         self._toast_reposition(toast)
+        toast.lift()
         self._bind_toast_visibility(toast)
 
         # If main window is already minimized, hide immediately
@@ -1202,7 +1214,6 @@ class CSGOEditor(tk.Tk):
         toast = tk.Toplevel(self)
         toast.overrideredirect(True)
         toast.configure(bg="#2a2a2a")
-        toast.attributes("-topmost", True)
         try:
             toast.attributes("-alpha", 0.97)
         except Exception:
@@ -1249,6 +1260,7 @@ class CSGOEditor(tk.Tk):
         no_btn.pack(side="left")
 
         self._toast_reposition(toast)
+        toast.lift()
         self._bind_toast_visibility(toast)
 
         # If main window is already minimized, hide immediately
