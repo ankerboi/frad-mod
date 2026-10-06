@@ -1,20 +1,20 @@
 // all of these should be quite self-explanatory
 "ranks"
 {
-	"competitive_rank"	"18"
-	"competitive_wins"	"666"
-	"wingman_rank"	"18"
-	"wingman_wins"	"777"
-	"dangerzone_rank"	"15"
-	"dangerzone_wins"	"888"
+	"competitive_rank"	"0"
+	"competitive_wins"	"0"
+	"wingman_rank"	"0"
+	"wingman_wins"	"0"
+	"dangerzone_rank"	"0"
+	"dangerzone_wins"	"0"
 }
 
 "vac_banned"	"0"
-"cmd_friendly"	"666"
-"cmd_teaching"	"777"
-"cmd_leader"	"888"
-"player_level"	"39"
-"player_cur_xp"	"4999"
+"cmd_friendly"	"0"
+"cmd_teaching"	"0"
+"cmd_leader"	"0"
+"player_level"	"0"
+"player_cur_xp"	"0"
 
 "country"	"FI"
 "currency"	"2"

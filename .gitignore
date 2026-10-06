@@ -1,2 +1,7 @@
 /*build*/
 /.idea
+__pycache__/
+*.pyc
+/dist/
+*.spec
+frad_social.json
