@@ -2,7 +2,7 @@
 
 ## What it is
 
-### A P2P app with matchmaking and a skin editor for [mikkokko's csgo_gc](https://github.com/mikkokko/csgo_gc)
+### A app with matchmaking and a skin editor for [mikkokko's csgo_gc](https://github.com/mikkokko/csgo_gc)
 
 ## Features
 - Gloves, knives and agents editor, exports straight to `inventory.txt`
