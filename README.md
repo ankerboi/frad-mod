@@ -2,7 +2,7 @@
 
 ## What it is
 
-### A app with matchmaking and a skin editor for [mikkokko's csgo_gc](https://github.com/mikkokko/csgo_gc)
+### a community server matchmaking tool with skins for servers that have [mikkokko's csgo_gc](https://github.com/mikkokko/csgo_gc)
 
 ## Features
 - Gloves, knives and agents editor, exports straight to `inventory.txt`
@@ -17,11 +17,6 @@
 3. Open the zip and drag and drop the files into the CS:GO folder.
 4. Replace the files with the new one.
 
-## How to Use Matchmaking
-1. Log in, open **Matchmaking** and invite friends (optional).
-2. Pick a category (5v5, dm, no_gc) and press **Queue**.
-3. Press **Copy IP**, then paste it into the CS:GO console.
-
 ## Servers
 Servers live in `csgo_gc/server.txt`, one `ip:port` per line. A line starting with `//` starts a category.
 
@@ -32,5 +27,3 @@ Servers live in `csgo_gc/server.txt`, one `ip:port` per line. A line starting wi
 //dm
 45.136.205.63:27017
 ```
-
-And add community servers to the file, then press Queue.
